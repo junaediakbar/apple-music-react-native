@@ -1,0 +1,52 @@
+import { colors, fontSize } from '@/constants/token'
+import { StyleSheet } from 'react-native'
+
+export const defaultStyles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: colors.background,
+	},
+	text: {
+		fontSize: fontSize.base,
+		color: colors.text,
+	},
+	button: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		paddingVertical: 12,
+		paddingHorizontal: 32,
+		borderRadius: 4,
+		elevation: 3,
+		backgroundColor: 'black',
+	},
+})
+
+export const utilsStyles = StyleSheet.create({
+	centeredRow: {
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	slider: {
+		height: 7,
+		borderRadius: 16,
+	},
+	itemSeparator: {
+		borderColor: colors.textMuted,
+		borderWidth: StyleSheet.hairlineWidth,
+		opacity: 0.2,
+	},
+	emptyContentText: {
+		...defaultStyles.text,
+		color: colors.textMuted,
+		textAlign: 'center',
+		marginTop: 20,
+	},
+	emptyContentImage: {
+		width: 200,
+		height: 200,
+		alignSelf: 'center',
+		marginTop: 40,
+		opacity: 0.3,
+	},
+})
